@@ -11,7 +11,7 @@
     16px/1.65 system-ui,
     -apple-system,
     BlinkMacSystemFont,
-    'Segoe UI',
+    "Segoe UI",
     sans-serif;
   background: var(--paper);
   color: var(--ink);
@@ -108,7 +108,7 @@ select {
   border: 2px solid transparent;
   padding: 6px 2px;
 }
-.nav a[aria-current='page'] {
+.nav a[aria-current="page"] {
   border-bottom-color: var(--ink);
 }
 .eyebrow {
@@ -121,7 +121,7 @@ select {
   gap: 9px;
 }
 .eyebrow::before {
-  content: '';
+  content: "";
   height: 7px;
   width: 7px;
   background: currentColor;
@@ -193,7 +193,7 @@ h3 {
   font-weight: 650;
 }
 .button::after {
-  content: '↗';
+  content: "↗";
   font-size: 18px;
 }
 .button:hover {
@@ -348,7 +348,7 @@ h3 {
   border-top: 1px solid var(--line);
 }
 .checklist li::before {
-  content: '↗';
+  content: "↗";
   color: var(--muted);
 }
 .checklist strong {
@@ -403,7 +403,7 @@ h3 {
   align-items: center;
   flex-wrap: wrap;
 }
-.steps span[aria-current='step'] {
+.steps span[aria-current="step"] {
   color: var(--ink);
   font-weight: 700;
 }
@@ -638,4 +638,25 @@ h3 {
   .button {
     transition: background 0.15s;
   }
+}
+
+/* The CRM owns validation and delivery; this website owns the form's presentation. */
+[data-crm-mount="form"] {
+  --crm-form-font-family: inherit;
+  --crm-form-surface: transparent;
+  --crm-form-text: var(--ink);
+  --crm-form-muted: var(--muted);
+  --crm-form-field-border: #728176;
+  --crm-form-field-radius: 8px;
+  --crm-form-accent: var(--ink);
+  --crm-form-accent-text: #ffffff;
+  --crm-form-accent-hover: #30463f;
+  --crm-form-focus: var(--ink);
+  --crm-form-padding: 0px;
+  --crm-form-border-width: 0px;
+  --crm-form-max-width: none;
+  --crm-form-button-width: 100%;
+}
+[data-crm-mount="form"] [data-crm-form-root]::part(submit) {
+  letter-spacing: 0.04em;
 }
